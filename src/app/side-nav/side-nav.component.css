@@ -15,3 +15,25 @@
   top: 0;
   z-index: 1;
 }
+
+.wrapper {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  width: 0.1px;
+  height: 0.5vh;
+  background-color: black;
+  box-shadow: -38px 2px 55px 10px rgba(0,0,0,0.8);
+  animation: 2s loading-side infinite;
+}
+
+@keyframes loading-side {
+  to {
+    transform: translate3d(140px, 0, 0);
+    animation-timing-function: ease-in;
+  }
+}

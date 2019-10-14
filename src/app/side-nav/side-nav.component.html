@@ -11,9 +11,15 @@
           <a mat-list-item href="#">Link 3</a>
       </span>
       <span *ngIf="globalService.loading">
-          <div style="background-color: rgb(233, 231, 231); margin: 15px 16px; width: 80%; height: 4vh"></div>
-          <div style="background-color: rgb(233, 231, 231); margin: 15px 16px; width: 80%; height: 4vh"></div>
-          <div style="background-color: rgb(233, 231, 231); margin: 15px 16px; width: 80%; height: 4vh"></div>
+          <div class="wrapper" style="background-color: rgb(233, 231, 231); margin: 15px 16px; width: 80%; height: 4vh">
+            <div class="overlay"></div>
+          </div>
+          <div class="wrapper" style="background-color: rgb(233, 231, 231); margin: 15px 16px; width: 80%; height: 4vh">
+            <div class="overlay"></div>
+          </div>
+          <div class="wrapper" style="background-color: rgb(233, 231, 231); margin: 15px 16px; width: 80%; height: 4vh">
+            <div class="overlay"></div>
+          </div>
       </span>
     </mat-nav-list>
   </mat-sidenav>
@@ -27,8 +33,11 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span style="margin-left: 30px;"><button mat-flat-button (click)="startAnimation()">Start animation</button></span>
-      <span style="margin-left: 30px;"><button mat-raised-button (click)="stopAnimation()">Stop animation</button></span>
+      <span style="margin-left: 30px;">
+        <button mat-raised-button (click)="toggleAnimation()">
+          {{globalService.loading ? 'Stop animation' : 'Start Animation'}}
+        </button>
+      </span>
     </mat-toolbar>
     <!-- Add Content Here -->
     <app-dashboard></app-dashboard>

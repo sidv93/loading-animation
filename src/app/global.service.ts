@@ -8,11 +8,7 @@ export class GlobalService {
   public loading = false;
   constructor() { }
 
-  public startLoading() {
-    this.loading = true;
-  }
-
-  public stopLoading() {
-    this.loading = false;
+  public toggleAnimation() {
+    this.loading = !this.loading;
   }
 }

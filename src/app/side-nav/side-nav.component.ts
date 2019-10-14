@@ -19,12 +19,8 @@ export class SideNavComponent {
 
   constructor(private breakpointObserver: BreakpointObserver, public globalService: GlobalService) {}
 
-  public startAnimation() {
-    this.globalService.startLoading();
-  }
-
-  public stopAnimation() {
-    this.globalService.stopLoading();
+  public toggleAnimation() {
+    this.globalService.toggleAnimation();
   }
 
 }

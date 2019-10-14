@@ -24,9 +24,17 @@
         </mat-grid-list>
   </span>
   <div class="loading-container" *ngIf="globalService.loading">
-      <div style="background-color: rgb(233, 231, 231); height: 350px; width: 569px;margin-left: 1em;"></div>
-      <div style="background-color: rgb(233, 231, 231); height: 350px; width: 569px;margin-left: 2em"></div>
-      <div style="background-color: rgb(233, 231, 231); height: 350px; width: 569px;margin-left: 1em; margin-top: 4vh;"></div>
-      <div style="background-color: rgb(233, 231, 231); height: 350px; width: 569px;margin-left: 2em; margin-top: 4vh;"></div>
+      <div class="outer-box" style="background-color: rgb(233, 231, 231); height: 350px; width: 569px;margin-left: 1em;">
+          <div class="overlay"></div>
+      </div>
+      <div class="outer-box" style="background-color: rgb(233, 231, 231); height: 350px; width: 569px;margin-left: 2em">
+          <div class="overlay"></div>
+      </div>
+      <div class="outer-box" style="background-color: rgb(233, 231, 231); height: 350px; width: 569px;margin-left: 1em; margin-top: 4vh;">
+          <div class="overlay"></div>
+      </div>
+      <div class="outer-box" style="background-color: rgb(233, 231, 231); height: 350px; width: 569px;margin-left: 2em; margin-top: 4vh;">
+          <div class="overlay"></div>
+      </div>
   </div>
 </div>

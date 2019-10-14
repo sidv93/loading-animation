@@ -32,11 +32,4 @@ export class DashboardComponent {
 
   constructor(private breakpointObserver: BreakpointObserver, public globalService: GlobalService) {}
 
-  public startAnimation() {
-    this.globalService.startLoading();
-  }
-
-  public stopAnimation() {
-    this.globalService.stopLoading();
-  }
 }
